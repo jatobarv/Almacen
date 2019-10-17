@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block tittle %}Registro{% endblock %}
+
+{% block body %}
+<div class="container">
+    <form  method="POST">
+        {% csrf_token %}
+        <div class="w3_login">
+			<div class="w3_login_module">
+				<div class="module form-module">
+				  <div class="toggle">
+				  </div>
+				  <div class="form">
+					<h2>Crear cuenta</h2>
+					<form action="#" method="post">
+                      <input type="text" name="username" maxlength="150" autofocus required id="id_username" placeholder="Usuario">
+					  <input type="text" name="first_name" maxlength="30" id="id_first_name" placeholder="Nombre">
+					  <input type="text" name="last_name" maxlength="30" id="id_last_name" placeholder="Apellido">
+                      <input type="email" name="email" maxlength="254" id="id_email" placeholder="E-mail">
+                      <input type="password" name="password1" required id="id_password1" placeholder="Contraseña">
+                      <input type="password" name="password2" required id="id_password2" placeholder="Confirmar contraseña">
+                      <input type="submit" value="Registrar">
+					</form>
+				  </div>
+				  <div class="cta"><a href="#">¿Olvidaste tú contraseña?</a></div>
+				</div>
+			</div>
+		</div>
+    </form>
+</div>
+{% endblock %}

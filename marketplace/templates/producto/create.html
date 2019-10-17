@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block tittle %}crear{% endblock %}
+
+{% block body %}
+<div class="container">
+  <form  method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="w3_login">
+    <div class="w3_login_module">
+      <div class="module form-module">
+        <div class="toggle"></div>
+        <div class="form">
+        <h2>Añadir producto</h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+          {{ form.as_p }}
+          <input type="submit" value="Entrar">
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </form>
+</div>
+{% endblock %}
